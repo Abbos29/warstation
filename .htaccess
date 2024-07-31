@@ -1,0 +1,13 @@
+AddDefaultCharset UTF-8
+ErrorDocument 404 /404.html
+
+RemoveHandler .html .htm 
+AddType application/x-httpd-php .php .htm .html .phtml
+
+
+RewriteEngine On
+RewriteCond %{HTTP:X-SSL} !yes$
+RewriteRule ^(.*)$ https://%{HTTP_HOST}/$1 [L,R=301]
+
+RewriteCond %{HTTP_HOST} ^www.stal-veter.ru$ [NC]
+RewriteRule ^(.*)$ https://stal-veter.ru/$1 [R=301,L]
