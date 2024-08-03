@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="description" content="Landing Page">
+    <meta name="description" content="Warstation">
     <meta name="viewport"
         content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Warstation</title>
@@ -23,20 +23,23 @@
 
 <body class="main__body">
 
-    <header class="header">
+    <header class="header" id="header">
         <div class="container">
             <div class="header__wrapper">
-                <img class="header__logo" src="./img/logo.png" alt="logo">
+                <a href="index.html">
+                    <img class="header__logo" src="./img/logo.png" alt="logo">
+
+                </a>
 
                 <nav class="header__menu">
-                    <a href="#">Для кого</a>
-                    <a href="#">Шлем</a>
-                    <a href="#">Арена</a>
-                    <a href="#">Карты</a>
-                    <a href="#">Цены</a>
-                    <a href="#">Отзывы</a>
-                    <a href="#">Вопросы</a>
-                    <a href="#">Контакты</a>
+                    <a href="index.html#for">Для кого</a>
+                    <a href="index.html#games">Шлем</a>
+                    <a href="index.html#organ">Арена</a>
+                    <a href="index.html#">Карты</a>
+                    <a href="index.html#price">Цены</a>
+                    <a href="#footer">Отзывы</a>
+                    <a href="#footer">Вопросы</a>
+                    <a href="#footer">Контакты</a>
                 </nav>
 
                 <div class="header__box">
@@ -57,7 +60,7 @@
         </div>
     </header>
 
-    <section class="hero">
+    <section class="hero" id="hero">
         <div class="container">
             <div class="hero__wrapper">
                 <h2><b>ПЕРВОЕ</b> В ЛИПЕЦКЕ</h2>
@@ -67,7 +70,7 @@
         </div>
     </section>
 
-    <section class="for">
+    <section class="for" id="for">
         <div class="for__icons">
             <img src="./img/yellow-icon.png" alt="icon">
             <img src="./img/yellow-icon.png" alt="icon">
@@ -108,7 +111,7 @@
         </div>
     </section>
 
-    <section class="games">
+    <section class="games" id="games">
         <div class="games__top">
             <div class="container">
                 <img src="./img/games-top-img.png" alt="img">
@@ -138,118 +141,224 @@
         </div>
     </section>
 
-    <section class="organ">
+    <section class="organ" id="organ">
         <img class="organ__img" src="./img/organ-img.png" alt="organ-img">
     </section>
 
-    <section class="price">
+    <section class="price" id="price">
 
         <div class="container">
             <h2 class="section-title">ПРАЙС</h2>
 
             <div class="price__wrap">
-                <div class="price__top">
-                    <p>Прайс-лист</p>
-                    <p>Доп. услуги</p>
+                <!-- Tabs -->
+                <div class="tabs">
+                    <div class="tabs__header price__top">
+                        <p class="tabs__header-item active">Прайс-лист</p>
+                        <p class="tabs__header-item">Доп. услуги</p>
+                    </div>
+                    <div class="tabs__content">
+                        <div class="tabs__content-item">
+                            <div class="price__inner">
+
+                                <div class="price__row price__row-first">
+                                    <div>
+                                        <p>
+                                            В 60 минут игры входит: <br>
+                                            10 минут – инструктаж, <br>
+                                            45 минут – игровое время, <br>
+                                            5 минут – фотосессия
+                                        </p>
+
+                                    </div>
+
+                                    <div>
+                                        <b>
+                                            VR-игра
+                                            с оплатой
+                                            за человека
+                                        </b>
+                                        <p>
+                                            (открытая игра,
+                                            могут добавиться
+                                            другие игроки)
+                                        </p>
+                                    </div>
+
+                                    <div>
+                                        <b>
+                                            VR-игра
+                                            с оплатой
+                                            за команду
+                                        </b>
+                                        <p>
+                                            (закрытая игра,
+                                            играет только
+                                            ваша команда)
+                                        </p>
+                                    </div>
+
+                                    <div>
+                                        <b>
+                                            Комната
+                                            отдыха
+                                        </b>
+                                    </div>
+                                </div>
+
+                                <div class="price__row">
+
+                                    <div>
+                                        <strong>пн-чт</strong>
+                                        <p>1 игра, 60 минут</p>
+                                    </div>
+
+                                    <div>
+                                        <strong> 600 руб.</strong>
+                                        <p>за 1 игрока</p>
+                                    </div>
+
+                                    <div>
+                                        <strong>5000 руб.</strong>
+                                        <p>за команду</p>
+                                    </div>
+
+                                    <div>
+                                        <strong>1000 руб.</strong>
+                                        <p>за 1 час</p>
+                                    </div>
+                                </div>
+
+                                <div class="price__row">
+
+                                    <div>
+                                        <strong>пт-вс</strong>
+                                        <p>1 игра, 60 минут</p>
+                                    </div>
+
+                                    <div>
+                                        <strong>800 руб.</strong>
+                                        <p>за 1 игрока</p>
+                                    </div>
+
+                                    <div>
+                                        <strong>7000 руб.</strong>
+                                        <p>за команду</p>
+                                    </div>
+
+                                    <div>
+                                        <strong>1000 руб.</strong>
+                                        <p>за 1 час</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="tabs__content-item">
+                            <div class="price__inner">
+                                <div class="price__row price__row-first">
+                                    <div>
+                                        <p>
+                                            В 60 минут игры входит: <br>
+                                            10 минут – инструктаж, <br>
+                                            45 минут – игровое время, <br>
+                                            5 минут – фотосессия
+                                        </p>
+
+                                    </div>
+
+                                    <div>
+                                        <b>
+                                            VR-игра
+                                            с оплатой
+                                            за человека
+                                        </b>
+                                        <p>
+                                            (открытая игра,
+                                            могут добавиться
+                                            другие игроки)
+                                        </p>
+                                    </div>
+
+                                    <div>
+                                        <b>
+                                            VR-игра
+                                            с оплатой
+                                            за команду
+                                        </b>
+                                        <p>
+                                            (закрытая игра,
+                                            играет только
+                                            ваша команда)
+                                        </p>
+                                    </div>
+
+                                    <div>
+                                        <b>
+                                            Комната
+                                            отдыха
+                                        </b>
+                                    </div>
+                                </div>
+
+                                <div class="price__row">
+
+                                    <div>
+                                        <strong>пт-вс</strong>
+                                        <p>1 игра, 60 минут</p>
+                                    </div>
+
+                                    <div>
+                                        <strong>800 руб.</strong>
+                                        <p>за 1 игрока</p>
+                                    </div>
+
+                                    <div>
+                                        <strong>7000 руб.</strong>
+                                        <p>за команду</p>
+                                    </div>
+
+                                    <div>
+                                        <strong>1000 руб.</strong>
+                                        <p>за 1 час</p>
+                                    </div>
+                                </div>
+
+                                <div class="price__row">
+
+                                    <div>
+                                        <strong>пн-чт</strong>
+                                        <p>1 игра, 60 минут</p>
+                                    </div>
+
+                                    <div>
+                                        <strong> 600 руб.</strong>
+                                        <p>за 1 игрока</p>
+                                    </div>
+
+                                    <div>
+                                        <strong>5000 руб.</strong>
+                                        <p>за команду</p>
+                                    </div>
+
+                                    <div>
+                                        <strong>1000 руб.</strong>
+                                        <p>за 1 час</p>
+                                    </div>
+                                </div>
+
+
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
-                <div class="price__inner">
-                    <div class="price__row price__row-first">
-                        <div>
-                            <p>
-                                В 60 минут игры входит: <br>
-                                10 минут – инструктаж, <br>
-                                45 минут – игровое время, <br>
-                                5 минут – фотосессия
-                            </p>
 
-                        </div>
-
-                        <div>
-                            <b>
-                                VR-игра
-                                с оплатой
-                                за человека
-                            </b>
-                            <p>
-                                (открытая игра,
-                                могут добавиться
-                                другие игроки)
-                            </p>
-                        </div>
-
-                        <div>
-                            <b>
-                                VR-игра
-                                с оплатой
-                                за команду
-                            </b>
-                            <p>
-                                (закрытая игра,
-                                играет только
-                                ваша команда)
-                            </p>
-                        </div>
-
-                        <div>
-                            <b>
-                                Комната
-                                отдыха
-                            </b>
-                        </div>
-                    </div>
-
-                    <div class="price__row">
-
-                        <div>
-                            <strong>пн-чт</strong>
-                            <p>1 игра, 60 минут</p>
-                        </div>
-
-                        <div>
-                            <strong> 600 руб.</strong>
-                            <p>за 1 игрока</p>
-                        </div>
-
-                        <div>
-                            <strong>5000 руб.</strong>
-                            <p>за команду</p>
-                        </div>
-
-                        <div>
-                            <strong>1000 руб.</strong>
-                            <p>за 1 час</p>
-                        </div>
-                    </div>
-
-                    <div class="price__row">
-
-                        <div>
-                            <strong>пт-вс</strong>
-                            <p>1 игра, 60 минут</p>
-                        </div>
-
-                        <div>
-                            <strong>800 руб.</strong>
-                            <p>за 1 игрока</p>
-                        </div>
-
-                        <div>
-                            <strong>7000 руб.</strong>
-                            <p>за команду</p>
-                        </div>
-
-                        <div>
-                            <strong>1000 руб.</strong>
-                            <p>за 1 час</p>
-                        </div>
-                    </div>
-                </div>
             </div>
         </div>
     </section>
 
-    <section class="gift">
+    <section class="gift" id="gift">
         <div class="container">
             <h2 class="section-title">подарочные <span>сертификаты</span></h2>
             <h3 class="section-pretitle">Дарите путешествия по виртуальным мирам</h3>
@@ -261,7 +370,7 @@
         </div>
     </section>
 
-    <section class="our">
+    <section class="our" id="our">
         <h2 class="section-title">наша <span>атмосфера</span></h2>
         <div class="our__wrapper">
             <img class="our__img1" src="./img/our-1.png" alt="img">
@@ -272,7 +381,7 @@
         </div>
     </section>
 
-    <footer class="footer">
+    <footer class="footer" id="footer">
         <div class="container">
             <div class="footer__wrapper">
                 <h2 class="section-title">мы ждём <span>вас</span></h2>
@@ -282,7 +391,11 @@
                 </h3>
                 <button>Записаться на игру</button>
                 <p>г. Липецк <br> ул. Водопьянова, д. 15</p>
-                <img class="footer__map" src="./img/footer-map.png" alt="map">
+                <!-- <img class="footer__map" src="./img/footer-map.png" alt="map"> -->
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2423.8223523672104!2d39.545488!3d52.590905!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x413a6b4c8f270649%3A0xaa97085e005d71e5!2z0YPQuy4g0JLQvtC00L7Qv9GM0Y_QvdC-0LLQsCwgMTUsINCb0LjQv9C10YbQuiwg0JvQuNC_0LXRhtC60LDRjyDQvtCx0LsuLCDQoNC-0YHRgdC40Y8sIDM5ODA0Ng!5e0!3m2!1sru!2s!4v1722664772420!5m2!1sru!2s"
+                    width="100%" height="550" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
                 <h4>
                     Остались вопросы? Звони! <br>
                     <a href="tel:+79191633533">+7 (919) 163-35-33</a>

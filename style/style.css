@@ -9,6 +9,10 @@
   padding: 0 15px;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 .section-title {
   text-align: center;
   font-size: clamp(2.25rem, 0.561rem + 7.11vw, 6.25rem);
@@ -54,6 +58,14 @@ body {
   font-size: 14px;
   color: #fff;
   text-transform: uppercase;
+  transition: 0.4s;
+  padding-bottom: 6px;
+  border-bottom: 1px solid transparent;
+}
+@media (hover: hover) {
+  .header__menu a:hover {
+    border-bottom: 1px solid #fff;
+  }
 }
 @media (max-width: 1050px) {
   .header__menu {
@@ -89,6 +101,11 @@ body {
   text-transform: uppercase;
   font-size: 12px;
   font-weight: 500;
+  transition: 0.4s;
+  opacity: 1;
+}
+.header__box button:hover {
+  opacity: 0.8;
 }
 .header__burger {
   width: 40px;
@@ -137,6 +154,13 @@ body {
   color: #fff;
   margin-top: 60px;
   font-size: 20px;
+  transition: 0.4s;
+  border: 2px solid transparent;
+  opacity: 1;
+}
+.hero__wrapper button:hover {
+  opacity: 0.8;
+  border: 2px solid #fff;
 }
 
 .for {
@@ -303,11 +327,27 @@ body {
 .games__item button {
   padding: 20px 40px;
   font-size: clamp(1.125rem, 0.808rem + 1.33vw, 1.875rem);
+  transition: 0.4s;
+  border: 2px solid transparent;
+  opacity: 1;
+}
+.games__item button:hover {
+  opacity: 0.8;
+  border: 2px solid #00bbfe;
 }
 @media (max-width: 480px) {
   .games__item button {
     padding: 13px 40px;
   }
+}
+
+.organ2 {
+  background-image: url(../img/organ-bg2.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  padding-top: 100px;
+  padding-bottom: 100px;
 }
 
 .organ {
@@ -320,6 +360,43 @@ body {
   width: 100%;
   position: relative;
   margin-top: -100px;
+}
+.organ__card {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.organ__card img {
+  width: 100%;
+}
+.organ__card:nth-child(2) h3 {
+  color: #ff00fe;
+}
+.organ__card:nth-child(2) img {
+  filter: drop-shadow(1px 1px 100px rgba(255, 0, 255, 0.8));
+}
+.organ__card:nth-child(3) h3 {
+  color: #00bbfe;
+}
+.organ__card:nth-child(3) img {
+  filter: drop-shadow(1px 1px 100px rgba(0, 186, 254, 0.8));
+}
+.organ__card h3 {
+  max-width: 800px;
+  text-align: center;
+  margin: 0 auto;
+  text-transform: uppercase;
+  font-size: clamp(1.875rem, 1.083rem + 3.33vw, 3.25rem);
+  font-style: italic;
+  font-weight: 300;
+  line-height: 1.1;
+  color: rgba(255, 255, 255, 0.5);
+  z-index: 3;
+  margin-top: 100px;
+}
+.organ__card h3 span {
+  font-style: normal;
+  font-weight: 600;
 }
 
 .price {
@@ -359,8 +436,9 @@ body {
   color: #fff;
   font-size: clamp(1.125rem, 0.861rem + 1.11vw, 1.75rem);
   cursor: pointer;
+  transition: 0.3s;
 }
-.price__top p:last-child {
+.price__top p.active {
   color: #000;
   background-color: #fff;
 }
@@ -435,6 +513,19 @@ body {
 .price__row div p {
   font-size: clamp(0.775rem, 0.669rem + 0.44vw, 1.125rem);
   line-height: 1.2;
+}
+
+.tabs {
+  width: 100%;
+}
+.tabs__header-item {
+  cursor: pointer;
+}
+.tabs__content {
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .gift {
@@ -548,6 +639,13 @@ body {
   padding: clamp(0.938rem, 0.674rem + 1.11vw, 1.563rem) clamp(1.875rem, 1.347rem + 2.22vw, 3.125rem);
   color: #fff;
   font-size: clamp(1rem, 0.631rem + 1.56vw, 1.875rem);
+  transition: 0.4s;
+  opacity: 1;
+  border: 2px solid transparent;
+}
+.footer__wrapper button:hover {
+  border: 2px solid #fff;
+  opacity: 0.8;
 }
 .footer__wrapper h3 {
   font-size: clamp(1.125rem, 0.703rem + 1.78vw, 2.125rem);
@@ -585,4 +683,60 @@ body {
   align-items: center;
   gap: 8px;
   justify-content: center;
+}
+
+.programs {
+  /* .programs__title */
+  /* .programs__grid */
+  /* .programs__item */
+  /* .programs__item-box */
+}
+.programs__title {
+  text-align: center;
+}
+.programs__title h3 {
+  font-weight: 600;
+  font-size: clamp(1.75rem, 0.906rem + 3.56vw, 3.75rem);
+  margin-bottom: 15px;
+}
+.programs__title i {
+  font-size: clamp(1.125rem, 0.808rem + 1.33vw, 1.875rem);
+}
+.programs__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px 30px;
+  margin-top: 50px;
+}
+.programs__item {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.programs__item button {
+  padding: 20px;
+  font-size: 24px;
+  font-weight: 500;
+}
+.programs__item-box {
+  width: 100%;
+  height: 200px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-image: url(../img/prog-11.png);
+  display: grid;
+  place-items: center;
+  padding: 10px;
+  text-align: center;
+  filter: drop-shadow(1px 1px 100px rgba(26, 186, 255, 0.7));
+}
+.programs__item-box h4 {
+  font-size: clamp(1.5rem, 1.394rem + 0.44vw, 1.75rem);
+  font-weight: 600;
+  line-height: 1.2;
+}
+.programs__item-box h4 span {
+  font-weight: 3;
+  font-size: clamp(1.375rem, 1.269rem + 0.44vw, 1.625rem);
 }/*# sourceMappingURL=style.css.map */
