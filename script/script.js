@@ -53,52 +53,11 @@ tabs('.tabs__header', '.tabs__header-item', '.tabs__content-item', 'active');
 
 
 document.addEventListener('DOMContentLoaded', function () {
-    const form = document.getElementById('myForm');
-
-    form.addEventListener('submit', function (event) {
-        event.preventDefault();
-
-        const phoneNumber = document.getElementById('phoneNumber').value;
-        const chatId = '-4285699435';
-        const botToken = '7266024320:AAFWtt01ghCyqXQhZLhZxrMda9562nhDIHE';
-
-        const message = `Номер телефона: ${phoneNumber}`;
-        const url = `https://api.telegram.org/bot${botToken}/sendMessage`;
-
-        fetch(url, {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify({
-                chat_id: chatId,
-                text: message
-            })
-        })
-            .then(response => response.json())
-            .then(data => {
-                if (data.ok) {
-                    // alert('Сообщение успешно отправлено');
-                    location.reload(); // Перезагрузка страницы после успешной отправки
-                } else {
-                    alert('Ошибка отправки сообщения');
-                }
-            })
-            .catch(error => {
-                alert('Произошла ошибка: ' + error);
-            });
-    });
-});
-
-
-
-
-// MODAL
-document.addEventListener('DOMContentLoaded', function () {
     const modal = document.querySelector('.modal');
     const modalBox = document.querySelector('.modal__box');
     const modalOpenBtns = document.querySelectorAll('.modal__btn'); // Получение всех кнопок открытия
     const modalCloseBtn = document.querySelector('.modal__close');
+    const form = document.getElementById('myForm');
 
     // Добавление обработчика ко всем кнопкам открытия
     modalOpenBtns.forEach(btn => {
@@ -116,7 +75,49 @@ document.addEventListener('DOMContentLoaded', function () {
             modal.classList.remove('modal__open');
         }
     });
+
+    form.addEventListener('submit', function(event) {
+        event.preventDefault();
+        
+        const phoneNumber = document.getElementById('phoneNumber').value;
+        const chatId = '-4285699435';
+        const botToken = '7266024320:AAFWtt01ghCyqXQhZLhZxrMda9562nhDIHE';
+        
+        const message = `Номер телефона: ${phoneNumber}`;
+        const url = `https://api.telegram.org/bot${botToken}/sendMessage`;
+
+        fetch(url, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+                chat_id: chatId,
+                text: message
+            })
+        })
+        .then(response => response.json())
+        .then(data => {
+            if (data.ok) {
+                modalBox.innerHTML = '<h2>Успешно отправлено ✅</h2>';
+                setTimeout(() => {
+                    modal.classList.remove('modal__open');
+                }, 4000); // Убираем класс modal__open через 1 секунду
+            } else {
+                alert('Ошибка отправки сообщения');
+            }
+        })
+        .catch(error => {
+            alert('Произошла ошибка: ' + error);
+        });
+    });
 });
+
+
+
+
+
+// MODAL
 
 
 

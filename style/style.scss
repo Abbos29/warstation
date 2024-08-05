@@ -127,7 +127,7 @@ body {
         }
 
         @media (max-width: 1050px) {
-            transition: .4s;
+            transition: 0.4s;
             // display: none;
             position: fixed;
             top: 0;
@@ -147,6 +147,7 @@ body {
         display: flex;
         flex-direction: column;
         gap: 10px;
+
 
         @media (max-width: 1050px) {
             // display: none;
@@ -188,14 +189,13 @@ body {
         width: 40px;
         display: none;
 
-    z-index: 3;
+        z-index: 3;
         img {
             width: 100%;
         }
 
         @media (max-width: 1050px) {
             display: block;
-            
         }
     }
 }
@@ -955,9 +955,6 @@ body {
     }
 }
 
-
-
-
 // MODAL
 
 body {
@@ -978,12 +975,11 @@ body {
     place-items: center;
 
     display: none;
-    z-index: 3; 
+    z-index: 3;
 
     &.modal__open {
         display: grid;
     }
-
 
     /* .modal__box */
     &__close {
@@ -993,14 +989,20 @@ body {
         margin-bottom: 10px;
     }
     &__box {
-
         max-width: 480px;
         width: 95%;
         margin: 0 auto;
 
         background-color: #fff;
         padding: 30px 30px 50px;
+
         
+        h2 {
+            color: #000;
+            text-align: center;
+            font-size: 28px;
+            font-weight: 600;
+        }
 
         form {
             display: flex;
