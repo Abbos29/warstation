@@ -46,10 +46,12 @@
                     <div>
                         <a href="tel:+79191633533">+7 (919) 163-35-33</a>
 
-                        <a href="#"><img src="./img/vk-icon.png" alt="vk-icon"></a>
+                        <a target="_blank" href="https://vk.com/vrarena_lip"><img src="./img/vk-icon.png"
+                                alt="vk-icon"></a>
+
                     </div>
 
-                    <button>записаться на игру</button>
+                    <button class="modal__btn">записаться на игру</button>
                 </div>
 
                 <div class="header__burger">
@@ -65,7 +67,7 @@
             <div class="hero__wrapper">
                 <h2><b>ПЕРВОЕ</b> В ЛИПЕЦКЕ</h2>
                 <h1><span>art&vr</span> пространство</h1>
-                <button>Записаться на игру</button>
+                <button class="modal__btn">Записаться на игру</button>
             </div>
         </div>
     </section>
@@ -389,7 +391,7 @@
                     <span>пн-вс</span> <br>
                     10:00-22:00
                 </h3>
-                <button>Записаться на игру</button>
+                <button class="modal__btn">Записаться на игру</button>
                 <p>г. Липецк <br> ул. Водопьянова, д. 15</p>
                 <!-- <img class="footer__map" src="./img/footer-map.png" alt="map"> -->
                 <iframe
@@ -400,11 +402,12 @@
                     Остались вопросы? Звони! <br>
                     <a href="tel:+79191633533">+7 (919) 163-35-33</a>
                 </h4>
-                <button>Забронировать</button>
+                <button class="modal__open">Забронировать</button>
                 <div class="footer__soc">
                     <div>
-                        <a href=""><img src="./img/icon-insta.png" alt="icon"></a>
-                        <a href=""><img src="./img/icon-vk.png" alt="icon"></a>
+                        <a target="_blank" href=""><img src="./img/icon-insta.png" alt="icon"></a>
+                        <a target="_blank" href="https://vk.com/vrarena_lip"><img src="./img/icon-vk.png"
+                                alt="icon"></a>
                     </div>
                     <h5>© 2024 Warstation</h5>
                 </div>
@@ -413,6 +416,16 @@
             </div>
         </div>
     </footer>
+
+    <div class="modal">
+        <div class="modal__box">
+            <img class="modal__close" src="./img/icon-close.png" alt="icon">
+            <form id="myForm">
+                <input id="phoneNumber" placeholder="Введите номер" type="text" required>
+                <button type="submit">Отправить</button>
+            </form>
+        </div>
+    </div>
 </body>
 
 <script src="./script/script.js"></script>

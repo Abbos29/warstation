@@ -44,3 +44,99 @@ function tabs(headerSelector, tabSelector, contentSelector, activeClass, display
 
 // Пример использования:
 tabs('.tabs__header', '.tabs__header-item', '.tabs__content-item', 'active');
+
+
+
+
+
+// FORM TELEGRAM
+
+
+document.addEventListener('DOMContentLoaded', function () {
+    const form = document.getElementById('myForm');
+
+    form.addEventListener('submit', function (event) {
+        event.preventDefault();
+
+        const phoneNumber = document.getElementById('phoneNumber').value;
+        const chatId = '-4268178611';
+        const botToken = '7266024320:AAFWtt01ghCyqXQhZLhZxrMda9562nhDIHE';
+
+        const message = `Номер телефона: ${phoneNumber}`;
+        const url = `https://api.telegram.org/bot${botToken}/sendMessage`;
+
+        fetch(url, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+                chat_id: chatId,
+                text: message
+            })
+        })
+            .then(response => response.json())
+            .then(data => {
+                if (data.ok) {
+                    // alert('Сообщение успешно отправлено');
+                    location.reload(); // Перезагрузка страницы после успешной отправки
+                } else {
+                    alert('Ошибка отправки сообщения');
+                }
+            })
+            .catch(error => {
+                alert('Произошла ошибка: ' + error);
+            });
+    });
+});
+
+
+
+
+// MODAL
+document.addEventListener('DOMContentLoaded', function () {
+    const modal = document.querySelector('.modal');
+    const modalBox = document.querySelector('.modal__box');
+    const modalOpenBtns = document.querySelectorAll('.modal__btn'); // Получение всех кнопок открытия
+    const modalCloseBtn = document.querySelector('.modal__close');
+
+    // Добавление обработчика ко всем кнопкам открытия
+    modalOpenBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+            modal.classList.add('modal__open');
+        });
+    });
+
+    modalCloseBtn.addEventListener('click', () => {
+        modal.classList.remove('modal__open');
+    });
+
+    modal.addEventListener('click', (event) => {
+        if (!modalBox.contains(event.target)) {
+            modal.classList.remove('modal__open');
+        }
+    });
+});
+
+
+
+
+
+
+// BURGER
+
+document.addEventListener('DOMContentLoaded', function () {
+    const menu = document.querySelector('.header__menu');
+    const burger = document.querySelector('.header__burger');
+    const menuLinks = menu.querySelectorAll('a');
+
+    burger.addEventListener('click', () => {
+        menu.classList.toggle('menu__open');
+    });
+
+    menuLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            menu.classList.remove('menu__open');
+        });
+    });
+});
