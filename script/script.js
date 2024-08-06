@@ -80,7 +80,6 @@ document.addEventListener('DOMContentLoaded', function () {
         if (!modalBox.contains(event.target)) {
             modal.classList.remove('modal__open');
             body.classList.remove('x-scroll');
-
         }
     });
 
@@ -150,6 +149,43 @@ document.addEventListener('DOMContentLoaded', function () {
             menu.classList.remove('menu__open');
             body.classList.remove('x-scroll');
 
+        });
+    });
+});
+
+
+
+
+
+// ORGANIZATION MODALS
+
+document.addEventListener('DOMContentLoaded', function () {
+    const body = document.querySelector('body');
+    const modals = document.querySelectorAll('.modal-prog');
+    const modalOpenBtns = document.querySelectorAll('.modal-prog__btn');
+
+    modalOpenBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+            const btnClass = btn.classList[1];
+            const modalNumber = btnClass.split('-').pop();
+            const modal = document.querySelector(`.modal-prog-${modalNumber}`);
+            const modalCloseBtn = modal.querySelector('.modal-prog__close');
+            const modalBox = modal.querySelector('.modal-prog__box');
+
+            modal.classList.add('modal__open');
+            body.classList.add('x-scroll');
+
+            modalCloseBtn.addEventListener('click', () => {
+                modal.classList.remove('modal__open');
+                body.classList.remove('x-scroll');
+            });
+
+            modal.addEventListener('click', (event) => {
+                if (!modalBox.contains(event.target)) {
+                    modal.classList.remove('modal__open');
+                    body.classList.remove('x-scroll');
+                }
+            });
         });
     });
 });

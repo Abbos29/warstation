@@ -85,6 +85,7 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    z-index: 5;
   }
 }
 .header__box {
@@ -125,7 +126,7 @@ body {
 .header__burger {
   width: 40px;
   display: none;
-  z-index: 3;
+  z-index: 6;
 }
 .header__burger img {
   width: 100%;
@@ -818,4 +819,67 @@ body.x-scroll {
   color: #fff;
   font-style: italic;
   font-size: 22px;
+}
+
+.modal-prog {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100dvh;
+  background-color: rgba(0, 0, 0, 0.5);
+  -webkit-backdrop-filter: blur(20px);
+          backdrop-filter: blur(20px);
+  display: grid;
+  place-items: center;
+  display: none;
+  z-index: 3;
+  /* .modal__box */
+}
+.modal-prog.modal__open {
+  display: grid;
+}
+.modal-prog__imgs {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 20px;
+}
+.modal-prog__imgs img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: 100%;
+  max-height: 600px;
+  width: 100%;
+}
+.modal-prog__close {
+  cursor: pointer;
+  display: block;
+  margin-left: auto;
+  margin-bottom: 10px;
+}
+.modal-prog__box {
+  max-width: 980px;
+  width: -moz-max-content;
+  width: max-content;
+  margin: 0 auto;
+  background-color: #fff;
+  padding: 30px 30px 50px;
+}
+@media (max-width: 1000px) {
+  .modal-prog__box {
+    width: 95%;
+  }
+}
+@media (max-width: 768px) {
+  .modal-prog__box {
+    overflow-x: hidden;
+    overflow-y: scroll;
+    max-height: 500px;
+  }
+}
+.modal-prog__box h2 {
+  color: #000;
+  text-align: center;
+  font-size: 28px;
+  font-weight: 600;
 }/*# sourceMappingURL=style.css.map */
