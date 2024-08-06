@@ -53,6 +53,8 @@ tabs('.tabs__header', '.tabs__header-item', '.tabs__content-item', 'active');
 
 
 document.addEventListener('DOMContentLoaded', function () {
+    const body = document.querySelector('body');
+
     const modal = document.querySelector('.modal');
     const modalBox = document.querySelector('.modal__box');
     const modalOpenBtns = document.querySelectorAll('.modal__btn'); // Получение всех кнопок открытия
@@ -63,26 +65,32 @@ document.addEventListener('DOMContentLoaded', function () {
     modalOpenBtns.forEach(btn => {
         btn.addEventListener('click', () => {
             modal.classList.add('modal__open');
+            body.classList.toggle('x-scroll');
+
         });
     });
 
     modalCloseBtn.addEventListener('click', () => {
         modal.classList.remove('modal__open');
+        body.classList.remove('x-scroll');
+
     });
 
     modal.addEventListener('click', (event) => {
         if (!modalBox.contains(event.target)) {
             modal.classList.remove('modal__open');
+            body.classList.remove('x-scroll');
+
         }
     });
 
-    form.addEventListener('submit', function(event) {
+    form.addEventListener('submit', function (event) {
         event.preventDefault();
-        
+
         const phoneNumber = document.getElementById('phoneNumber').value;
         const chatId = '-4285699435';
         const botToken = '7266024320:AAFWtt01ghCyqXQhZLhZxrMda9562nhDIHE';
-        
+
         const message = `Номер телефона: ${phoneNumber}`;
         const url = `https://api.telegram.org/bot${botToken}/sendMessage`;
 
@@ -96,20 +104,20 @@ document.addEventListener('DOMContentLoaded', function () {
                 text: message
             })
         })
-        .then(response => response.json())
-        .then(data => {
-            if (data.ok) {
-                modalBox.innerHTML = '<h2>Успешно отправлено ✅</h2>';
-                setTimeout(() => {
-                    modal.classList.remove('modal__open');
-                }, 4000); // Убираем класс modal__open через 1 секунду
-            } else {
-                alert('Ошибка отправки сообщения');
-            }
-        })
-        .catch(error => {
-            alert('Произошла ошибка: ' + error);
-        });
+            .then(response => response.json())
+            .then(data => {
+                if (data.ok) {
+                    modalBox.innerHTML = '<h2>Успешно отправлено ✅</h2>';
+                    setTimeout(() => {
+                        modal.classList.remove('modal__open');
+                    }, 4000); // Убираем класс modal__open через 1 секунду
+                } else {
+                    alert('Ошибка отправки сообщения');
+                }
+            })
+            .catch(error => {
+                alert('Произошла ошибка: ' + error);
+            });
     });
 });
 
@@ -127,17 +135,21 @@ document.addEventListener('DOMContentLoaded', function () {
 // BURGER
 
 document.addEventListener('DOMContentLoaded', function () {
+    const body = document.querySelector('body');
     const menu = document.querySelector('.header__menu');
     const burger = document.querySelector('.header__burger');
     const menuLinks = menu.querySelectorAll('a');
 
     burger.addEventListener('click', () => {
         menu.classList.toggle('menu__open');
+        body.classList.toggle('x-scroll');
     });
 
     menuLinks.forEach(link => {
         link.addEventListener('click', () => {
             menu.classList.remove('menu__open');
+            body.classList.remove('x-scroll');
+
         });
     });
 });

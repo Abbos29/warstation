@@ -756,7 +756,7 @@ body {
   font-weight: 3;
   font-size: clamp(1.375rem, 1.269rem + 0.44vw, 1.625rem);
 }
-body:has(.modal__open, .menu__open) {
+body.x-scroll {
   overflow: hidden;
 }
 

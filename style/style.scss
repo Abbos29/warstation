@@ -958,7 +958,7 @@ body {
 // MODAL
 
 body {
-    &:has(.modal__open, .menu__open) {
+    &.x-scroll {
         overflow: hidden;
     }
 }
