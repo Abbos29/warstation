@@ -341,6 +341,13 @@ body {
 .games__item h3 span {
   color: #00bbfe;
 }
+.games__item a {
+  display: block;
+  width: -moz-max-content;
+  width: max-content;
+  margin: 0 auto;
+  color: #000;
+}
 .games__item button {
   padding: 20px 40px;
   font-size: clamp(1.125rem, 0.808rem + 1.33vw, 1.875rem);
@@ -811,7 +818,7 @@ body.x-scroll {
   font-style: italic;
   text-align: center;
   padding: 20px;
-  font-size: 20px;
+  font-size: 18px;
   box-shadow: 1px 1px 20px 0px rgba(0, 0, 0, 0.2);
 }
 .modal__box form button {
@@ -819,7 +826,7 @@ body.x-scroll {
   background-color: #000;
   color: #fff;
   font-style: italic;
-  font-size: 22px;
+  font-size: 20px;
 }
 
 .modal-prog {

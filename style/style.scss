@@ -446,6 +446,13 @@ body {
             }
         }
 
+        a {
+            display: block;
+            width: max-content;
+            margin: 0 auto;
+            color: #000;
+        }
+
         button {
             padding: 20px 40px;
             // font-size: 26px;
@@ -1019,7 +1026,7 @@ body {
                 font-style: italic;
                 text-align: center;
                 padding: 20px;
-                font-size: 20px;
+                font-size: 18px;
                 box-shadow: 1px 1px 20px 0px rgba(0, 0, 0, 0.2);
             }
             button {
@@ -1027,7 +1034,7 @@ body {
                 background-color: #000;
                 color: #fff;
                 font-style: italic;
-                font-size: 22px;
+                font-size: 20px;
             }
         }
     }
