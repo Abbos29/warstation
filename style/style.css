@@ -729,6 +729,7 @@ body {
   display: flex;
   flex-direction: column;
   gap: 10px;
+  cursor: pointer;
 }
 .programs__item button {
   padding: 20px;
