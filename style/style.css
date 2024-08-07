@@ -375,7 +375,38 @@ body {
 }
 
 .organ {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  flex-direction: column;
   /* .organ__img */
+}
+.organ__btn {
+  position: relative;
+  display: block;
+  width: -moz-max-content;
+  width: max-content;
+  margin: 0 auto;
+  color: #000;
+  padding: 20px 40px;
+  font-size: clamp(1.125rem, 0.808rem + 1.33vw, 1.875rem);
+  transition: 0.4s;
+  border: 2px solid transparent;
+  opacity: 1;
+  position: absolute;
+  bottom: 100px;
+  background: #f0f0f0;
+  box-shadow: 1px 1px 10px 0px rgba(0, 0, 0, 0.8);
+}
+.organ__btn:hover {
+  opacity: 0.9;
+  border: 2px solid #00bbfe;
+}
+@media (max-width: 480px) {
+  .organ__btn {
+    padding: 13px 40px;
+  }
 }
 .organ__img {
   max-width: 1920px;
