@@ -681,6 +681,18 @@ body {
     padding: 0;
   }
 }
+.footer__row {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 50px;
+}
+.footer__row a {
+  text-transform: uppercase;
+  color: #fff;
+}
 .footer__wrapper {
   display: flex;
   flex-direction: column;

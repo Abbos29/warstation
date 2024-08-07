@@ -848,6 +848,20 @@ body {
         }
     }
 
+    &__row {
+        display: flex;
+        justify-content: center;
+        gap: 30px;
+        align-items: center;
+
+        flex-wrap: wrap;
+
+        margin-top: 50px;
+        a {
+            text-transform: uppercase;
+            color: #fff;
+        }
+    }
     /* .footer__wrapper */
     &__wrapper {
         display: flex;
